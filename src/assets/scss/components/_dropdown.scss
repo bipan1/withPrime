@@ -1,0 +1,49 @@
+.dropdown{
+  overflow: visible!important;
+  .dropdown{
+    &--filter{
+      width: 580px;
+      padding: 1rem;
+
+      .form-row{
+        margin-bottom: 1rem;
+      }
+    }
+
+    &--checkbox{
+      border-radius: 4px;
+      width: 132px;
+      box-shadow: 0 2px 4px rgba(0,0,0,.08);
+      padding:.5rem;
+
+     
+    }
+  }
+
+  &-table{
+
+
+    .ic-more{
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+    .dropdown-menu{
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,.08);
+      padding: 0;
+      border-color: transparent;
+      
+      .dropdown-item{
+        font-weight: 600;
+        color: $secondary;
+        &:hover{
+          background-color: #F8F8FB;
+          color: $blue;
+        }
+      }
+     }
+  }
+}
+

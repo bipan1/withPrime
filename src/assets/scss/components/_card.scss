@@ -1,0 +1,292 @@
+$card:(padding:1rem,
+  radius:8px,
+  shadow:0 2px 4px rgba($blue, .04),
+  hoverShadow:0 16px 48px rgba($blue, .12),
+  smShadow:0 2px 4px 8px rgba($blue, .04),
+);
+
+.card {
+  background-color: $white;
+  padding: map-get($card, padding);
+  border-radius: map-get($card, radius);
+
+  .dashboard--title {
+    h6 {
+      @include des;
+    }
+
+  }
+
+  &__lg {
+    padding: 3.5rem;
+    @include media-breakpoint-down(md){
+      padding: 1.5rem;
+    }
+  }
+  &__sm{
+    // padding: 3.5rem;
+    display: block;
+    text-align: center;
+    h6 {
+      display: block;
+      color: $gray-100;
+      @include des;
+      margin-top: 1rem;
+    }
+    &:hover{
+      box-shadow: map-get($card, smShadow);
+      // transform: translateY(-8px);
+    }
+  }
+
+  &-topup {
+    padding: .5rem;
+    text-align: center;
+    min-width: 80px;
+    flex-shrink: 0;
+    border: 2px solid transparent;
+
+    img {
+      width: 3rem;
+      height: 3rem;
+      object-fit: contain;
+      display: block;
+      margin: auto;
+      margin-bottom: .5rem;
+    }
+
+    p {
+      @include rfs(12);
+      font-weight: 600;
+    }
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &.active {
+      border: 2px solid $info;
+    }
+  }
+
+  &--img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+  }
+
+  &--clogo {
+    padding: 1rem;
+    background-color: #e6e6e6;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__stats {
+    transition: ease-in .2s;
+    box-shadow: map-get($card, shadow);
+
+    &:hover {
+      box-shadow: map-get($card, hoverShadow);
+      transform: translateY(-8px);
+    }
+  }
+
+  &__table {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-breakpoint-down(sm){
+      flex-direction: column;
+    }
+    h6{
+      color: $grey-900;
+      
+    }
+    .table {
+      margin-top: 1rem;
+    }
+  }
+
+  &__login {
+    padding: 2rem 1rem;
+    box-shadow: 0 2px 4px rgba($blue, .08);
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__bank {
+    background-image: url('../../image/world-dot.svg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    background-color: $secondary;
+    transition: ease-out .3s;
+    margin-top: .5rem;
+
+    .head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h6 {
+        margin-bottom: 0;
+        @include des;
+        font-weight: 600;
+      }
+    }
+
+    .code {
+      margin-top: 1.5rem;
+
+      span {
+        @include h6;
+      }
+    }
+
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      margin-top: .5rem;
+
+      .textbox {
+
+        h6 {
+          @include small;
+          font-weight: 400;
+          color: rgba(255, 255, 255, .76);
+        }
+
+        h5 {
+          @include des;
+          font-weight: 400;
+        }
+      }
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      cursor: pointer;
+    }
+  }
+
+
+  &__graph {
+    @include media-breakpoint-up(md) {
+      height: 100%;
+
+
+    }
+
+
+
+    .title {
+      @include des;
+      color: $primary;
+      margin-bottom: 1rem;
+    }
+
+    .item {
+      margin-bottom: 1.5rem;
+
+      .number {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+
+        h3 {
+          margin-right: .5rem;
+          @include h4;
+        }
+
+        i {
+          @include small;
+        }
+      }
+
+      h5 {
+        @include des;
+        color: $secondary;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &_sticky {
+    position: sticky;
+    top: 2px;
+  }
+
+  &__summary {
+    background: linear-gradient(to top, var(--theme-color), var(--theme-secondary));
+    color: $white;
+
+    h6 {
+      @include des;
+      margin-bottom: 1rem;
+    }
+
+  }
+ 
+  &_shortcut {
+    display: block;
+    text-align: center;
+    height: 100%;
+
+    h6 {
+      display: block;
+      color: $gray-100;
+      @include des;
+      margin-top: 1rem;
+    }
+
+    i {
+      font-size: 2rem;
+    }
+
+    &:hover {
+      color: $white;
+      background: linear-gradient(to top, var(--theme-color), var(--theme-secondary));
+
+      h6 {
+        color: $white;
+      }
+    }
+  }
+  &__border{
+    border: 1px solid $border-color-gray ;
+    padding: 1.5rem 1rem;
+  }
+  &--details{
+    p{
+      color: var(--theme-color);
+      font-weight: 600;
+    }
+    span{
+      @include des;
+      text-align: right;
+    }
+  }
+}
+
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--theme-color);
+
+}

@@ -1,0 +1,14 @@
+.image{
+    &--main{
+        height: 190px;
+        object-fit: contain;
+    }
+    &--lg{
+        height: 120px;
+        object-fit: contain;
+    }
+    &--small{
+        height: 55px;
+        object-fit: contain; 
+    }
+}

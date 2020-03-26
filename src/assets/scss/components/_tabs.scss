@@ -1,0 +1,61 @@
+.tab {
+    &--merchant {
+
+        .nav-pills {
+            background-color:$white;
+            border-radius: map-get($tabs, radiusSize);
+
+            .nav-item {
+                .nav-link {
+                    @include rfs(map-get($font-sizes, p));
+                    color: map-get($tabs, fontColor);
+                    font-weight: 600;
+                    border-bottom: 2px solid transparent;
+                    padding:1rem;
+                    position: relative;
+                    &.active{
+                        background-color: white;
+                        border-radius: map-get($tabs, radiusSize);
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                        border-bottom: 2px solid var(--theme-color);
+                        color: var(--theme-color);
+                    }
+
+                    .indicator{
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 8px;
+                        background-color: $info;
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        top: 1rem;
+                    }
+                }
+            }
+        }
+
+        .tab-content {
+            margin-top: 1rem;
+        }
+
+
+
+
+    }
+
+    &--info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &--activity {
+        p {
+            color: $gray-600;
+        }
+    }
+
+    
+}
+

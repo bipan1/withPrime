@@ -1,0 +1,16 @@
+.list{
+    &-topup{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        margin-bottom: 1.5rem;
+
+    }
+}
+
+
+// react bootstrap overwrite
+.react-bootstrap-daterangepicker-container{
+    width: 100%!important;
+}

@@ -1,0 +1,45 @@
+button {
+  span {
+    @include rfs(map-get($font-sizes, small));
+    // margin-left: .5rem;
+  }
+}
+.btn{
+  &-sm{
+    @include des;
+  }
+}
+
+.btn-theme {
+  background-color: var(--theme-color);
+  color: $white;
+  margin-top: 1rem;
+  @include des;
+  font-weight: 500;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+$theme-colors: map-merge(("purple": #E5E5F3,
+    "lpurple": $input-info-color,
+
+  ),
+  $theme-colors);
+
+@each $color,
+$value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+
+  //for text color class
+  @include text-emphasis-variant(".text-#{$color}", $value);
+
+  //for alert
+  .alert-#{$color} {
+    background-color: rgba($value, .12);
+    color: $value;
+  }
+}

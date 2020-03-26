@@ -1,0 +1,60 @@
+.list{
+  @include list-unstyled;
+  &-summary{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li{
+      display: flex;
+      justify-content: space-between;
+      @include des;
+      padding: .5rem 0;
+      color: $secondary;
+      h6{
+        @include des;
+        font-weight: 400;
+        color: $dark;
+      }
+      button{
+        @include small;
+      }
+
+
+      &:not(:last-child){
+
+        border-bottom: 1px solid #e6e6e6;
+      }
+
+    }
+
+  }
+  &-tags{
+    @include small;
+    span{
+      display: inline-block;
+      background-color: $secondary;
+      border-radius: 16px;
+      padding: 2px .5rem;
+      margin-bottom: .25rem;
+      color: white;
+      &:not(:last-child){
+        margin-right: .25rem;
+
+      }
+    }
+  }
+}
+
+
+//helplist
+
+.helplist{
+
+  &:not(:last-child){
+    border-bottom: 1px solid $light;
+  }
+  h6{
+    margin-bottom: .5rem;
+  }
+}

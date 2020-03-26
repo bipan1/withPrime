@@ -1,0 +1,55 @@
+.modal{
+    &-body{
+        h6{
+            font-size: 14px;
+        }
+        border-top: 1px solid $border-color-gray;
+        padding: 1.25rem;
+    }
+    &-header{
+        padding: 1rem !important;
+        .close{
+            margin: 0;
+            padding: 0;
+            font-size: .9rem;
+        }
+    }
+    &-logo{
+        height: 50px;
+    }
+    &-main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+            @include small;
+            color: $grey-900;
+        }
+        h5{
+            color: $gray-700;
+        }
+    }
+    &-details{
+        margin-top: 0.5rem;
+        // border-top: 1px solid $border-color-gray;
+    }
+    &-image{
+        height: 48px;
+        width: 48px;
+        flex-shrink: 0;
+        // margin-right: 1rem;
+        img{
+           height: 100%;
+           width: 100%;
+            border-radius: 50%;
+        }
+       
+    }
+    &-footer{
+        .btn{
+            margin: 0;
+        }
+    }
+}
+
+

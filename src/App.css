@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -11,6 +11,48 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.ic-error:before {
+  content: "\e923";
+}
+
+.p-menubar .p-menuitem-text {
+  color : white !important;
+}
+
+.p-menubar .p-menuitem-link:hover{
+  background-color: rgb(168, 173, 171) !important;
+}
+
+
+
+.background{
+  background: #e6e6ea no-repeat center center fixed;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+	
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.error{
+  color: red;
+  display: block;
+  margin-top: 4px;
+  font-style: italic;
+  font-size: small;
+}
+
+.error i{
+  display: inline-block;
+  margin-right: .25rem;
+}
+
+.social-icons a {
+    padding: 0.2rem;
 }
 
 .App-header {

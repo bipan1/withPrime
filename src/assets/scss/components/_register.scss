@@ -1,0 +1,76 @@
+.registration{
+    &--header{
+        background-color: map-get($register,headColor );  
+    }
+ 
+    &--tab{
+        img{
+            padding:map-get($register, px);
+        }
+        .nav-pills{
+            border-radius: map-get($register, radiusSize );
+            justify-content: center;
+            .nav-item{
+                .nav-link{
+                    @include rfs(map-get($font-sizes,p));
+                    color: $secondary;
+                    font-weight: 600;
+                    border-bottom: 2px solid transparent;
+                    padding:1rem;
+                    &.active{
+                        background-color: map-get($register,headColor );
+                        border-radius: map-get($register, radiusSize );
+                        border-bottom-left-radius:0 ;
+                        border-bottom-right-radius:0 ;
+                        border-bottom: 2px solid $primary;
+                        color: $primary;
+                    }
+                    &.visited{
+                        color: $success;
+                    }
+                }
+            }
+        }
+        .tab-content{
+            margin-top: 1rem;
+        }
+        
+     }
+     &--upload{
+         img{
+             padding: map-get($register, pxy);
+         }
+        
+         h4{
+             margin-top: map-get($register, py );
+         }
+         p{
+            margin-bottom: map-get($register, py );
+            color: $gray-600;
+         }
+         a{
+             color: map-get($register, linkColor);
+             text-decoration: underline;
+         }
+     }
+
+     .img-container{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80px;
+        height: 80px;
+        background: white;
+        border-radius: map-get($register, px );
+        left: 0;
+        right: 0;
+        bottom: -20%;
+        img{
+            display: block;
+            margin: auto;
+        }
+        
+    }
+}
+

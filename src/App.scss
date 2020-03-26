@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700&display=swap"');
+
+// Bootstrap
+// Set to false to hide warnings when using any of the deprecated mixins and functions that are planned to be removed in v5.
+$enable-deprecation-messages: false;
+
+//customizing bootstrap
+@import "./assets/scss/abstracts/variables";
+
+@import './assets/scss/frameworks/cbootstrap';
+
+@import './icon.css';
+@import './eicon.css';
+
+//slick slider
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+@import "./assets/scss/abstracts/mixins";
+@import "./assets/scss/abstracts/functions";
+
+@import "./assets/scss/base/base";
+@import "./assets/scss/base/animations";
+@import "./assets/scss/base/utilities";
+@import "./assets/scss/base/typography";
+@import "./assets/scss/base/spacing";
+
+@import "./assets/scss/layouts/dashboard";
+
+@import "./assets/scss/layouts/footer";
+
+@import "./assets/scss/components/approval";
+@import "./assets/scss/components/card";
+@import "./assets/scss/layouts/settings";
+@import "./assets/scss/components/buttons";
+@import "./assets/scss/components/login";
+@import "./assets/scss/components/image";
+@import "./assets/scss/components/register";
+@import "./assets/scss/components/table";
+@import "./assets/scss/components/tabs";
+@import "./assets/scss/components/topup";
+@import "./assets/scss/components/form";
+@import "./assets/scss/components/dropdown";
+@import "./assets/scss/components/slider";
+@import "./assets/scss/components/loader";
+@import "./assets/scss/components/modal";
+@import "./assets/scss/components/list.scss";
+@import "./assets/scss/components/utilities";
+@import "./assets/scss/components/sideoverlay";
+
+html,
+body {
+  @include respond(xxl, min) {
+    font-size: 1.1em !important;
+  }
+}
+
+
